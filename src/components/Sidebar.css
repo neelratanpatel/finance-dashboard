@@ -1,0 +1,72 @@
+.sidebar {
+  width: 280px;
+  background: var(--bg-card);
+  border-right: 1px solid var(--border-color);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  padding-left: 10px;
+}
+
+.brand-logo {
+  background: var(--primary);
+  color: white;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  border-radius: 12px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: #f7f9ff;
+  color: var(--text-main);
+}
+
+.nav-link.active {
+  background: #f4f7fe;
+  color: var(--primary);
+  border-right: 4px solid var(--primary);
+}
+
+@media (max-width: 640px) {
+  .brand-name {
+    display: none; /* Only show the 'F' logo on phones */
+  }
+  
+  .nav-link span {
+    display: none; /* Only show icons in the bottom/top bar */
+  }
+
+  .sidebar {
+    padding: 10px;
+    justify-content: center;
+  }
+}
